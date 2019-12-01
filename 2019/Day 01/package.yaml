@@ -1,0 +1,93 @@
+name: rocket
+version: 0.1.0.0
+github: "Tehnix/rocket"
+license: BSD3
+author: "Christian Laustsen"
+maintainer: "ckl@codetalk.io"
+copyright: "Christian Laustsen"
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+description: Please see the README on GitHub at <https://github.com/Tehnix/rocket#readme>
+
+default-extensions:
+  - ApplicativeDo
+  - BangPatterns
+  - ConstraintKinds
+  - DataKinds
+  - DefaultSignatures
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveLift
+  - DeriveTraversable
+  - EmptyCase
+  - EmptyDataDecls
+  - ExistentialQuantification
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - InstanceSigs
+  - KindSignatures
+  - LambdaCase
+  - MultiParamTypeClasses
+  - MultiWayIf
+  - NamedFieldPuns
+  - OverloadedStrings
+  - PatternSynonyms
+  - RankNTypes
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TupleSections
+  - TypeApplications
+  - TypeFamilies
+  - TypeFamilyDependencies
+  - TypeOperators
+
+dependencies:
+  - base-noprelude
+  - relude
+  - say
+  - text-conversions
+  - hspec
+  - QuickCheck
+
+library:
+  source-dirs: src
+
+executables:
+  rocket-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+      - -Wall
+      - -Wcompat
+      - -Wincomplete-record-updates
+      - -Wincomplete-uni-patterns
+      - -Wredundant-constraints
+      - -Wpartial-fields
+      - -fhide-source-paths
+      - -Wno-type-defaults
+    dependencies:
+      - rocket
+
+tests:
+  rocket-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -Wall
+      - -Wcompat
+      - -Wincomplete-record-updates
+      - -Wincomplete-uni-patterns
+      - -Wredundant-constraints
+      - -Wpartial-fields
+      - -fhide-source-paths
+      - -Wno-type-defaults
+    dependencies:
+      - rocket
