@@ -1,14 +1,13 @@
-name: rocket
+name: aoc
 version: 0.1.0.0
-github: "Tehnix/rocket"
+github: "Tehnix/Advent-of-Code"
 license: BSD3
 author: "Christian Laustsen"
 maintainer: "ckl@codetalk.io"
 copyright: "Christian Laustsen"
 extra-source-files:
   - README.md
-  - ChangeLog.md
-description: Please see the README on GitHub at <https://github.com/Tehnix/rocket#readme>
+description: Please see the README on GitHub at <https://github.com/Tehnix/Advent-of-Code#readme>
 
 default-extensions:
   - ApplicativeDo
@@ -58,7 +57,7 @@ library:
   source-dirs: src
 
 executables:
-  rocket-exe:
+  aoc-exe:
     main: Main.hs
     source-dirs: app
     ghc-options:
@@ -74,10 +73,10 @@ executables:
       - -fhide-source-paths
       - -Wno-type-defaults
     dependencies:
-      - rocket
+      - aoc
 
 tests:
-  rocket-test:
+  aoc-test:
     main: Spec.hs
     source-dirs: test
     ghc-options:
@@ -90,4 +89,4 @@ tests:
       - -fhide-source-paths
       - -Wno-type-defaults
     dependencies:
-      - rocket
+      - aoc

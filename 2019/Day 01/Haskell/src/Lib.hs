@@ -40,7 +40,7 @@ rocketFuel masses = sum $ map totalFuel masses
 
 runProgram :: IO ()
 runProgram = do
-  fileLines <- readFileIntoLines "./data/input.txt"
+  fileLines <- readFileIntoLines "../data/input.txt"
   let masses = map (Unsafe.fromJust . readMaybe @Int . toString) fileLines
   print $ "Part One: " <> (show $ rocketMassesFuel masses)
   print $ "Part Two: " <> (show $ rocketFuel masses)
