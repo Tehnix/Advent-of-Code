@@ -34,13 +34,3 @@ So, for each module mass, calculate its fuel and add it to the total. Then, trea
 - The fuel required by a module of mass 100756 and its fuel is: 33583 + 11192 + 3728 + 1240 + 411 + 135 + 43 + 12 + 2 = 50346.
 
 What is the sum of the fuel requirements for all of the modules on your spacecraft when also taking into account the mass of the added fuel? (Calculate the fuel requirements for each module separately, then add them all up at the end.)
-
-
-# Solution Notes
-
-Use the following commands for quickly iterating,
-
-```bash
-$ stack test --file-watch --fast
-$ stack exec -- ghcid
-```
