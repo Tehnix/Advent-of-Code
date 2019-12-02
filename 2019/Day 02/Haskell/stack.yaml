@@ -1,0 +1,5 @@
+resolver: nightly-2019-11-29
+extra-deps:
+  - base-noprelude-4.13.0.0
+packages:
+  - .
